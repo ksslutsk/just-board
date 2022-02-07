@@ -1,0 +1,21 @@
+<div class="boardProfile">
+    <app-board-profile></app-board-profile>
+</div>
+<div class="board">
+    <app-search></app-search>
+    <ul *ngFor="let publication of publications">
+        <li>
+            <div class="post">
+                <p id="topParagraph">UserId: {{publication.userId}}
+                    <span style="float: right;">
+                        <button (click)="update(publication.id)">&#183;&#183;&#183;</button>
+                        <button (click)="delete(publication)">X</button>
+                    </span>
+                    <br>PubId: {{publication.id}}
+                </p>
+                <img *ngIf="publication.imageUrl" src={{publication.imageUrl}}>
+                <p *ngIf="publication.textContent">Text content: {{publication.textContent}}</p>
+            </div>
+        </li>
+    </ul>
+</div>

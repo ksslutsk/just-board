@@ -1,0 +1,12 @@
+<div class="profile-card">
+    <div class="profile">
+            <img id="prfilePhoto" 
+                src={{user!.profilePhotoUrl}}>
+            <label for="prfilePhoto">{{user!.name}}</label>
+    </div>
+    <div>
+        <button (click)="createPublication()">Create publication</button>
+        <button (click)="editProfile()">Edit profile</button>
+        <button (click)="logOut()">Log out</button>
+    </div>
+</div>

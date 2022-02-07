@@ -1,0 +1,23 @@
+<div id="body">
+    <div class="input-block">
+        <label for="username">New username: </label>
+        <input id="username" #nameInput>
+        <button (click)="saveUsername(nameInput!.value)">Save username</button>
+    </div>
+    <div class="input-block">
+        <label for="profileImgUrl">New profile photo: </label>
+        <input id="profileImgUrl" #imgUrlInput>
+        <button (click)="saveProfilePhoto(imgUrlInput!.value)">Save new photo</button>
+    </div>
+    <div class="input-block">
+        <label for="oldPass">Old password: </label>
+        <input id="oldPass" #oldPassInput>
+        <label for="newPass">New password: </label>
+        <input id="newPass" #newPassInput>
+        <label for="confNewPass">Confirm new password: </label>
+        <input id="confNewPass" #confPass>
+        <button (click)="saveNewPassword(oldPassInput!.value, newPassInput!.value, confPass!.value)">Save password</button>
+    </div>
+    <button (click)="cancel()">Back</button>
+</div>
+

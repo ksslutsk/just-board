@@ -1,0 +1,12 @@
+<div class="card">
+    <div class="input-div">
+        <label for="urlInput">Paste image url here: </label>
+        <input id="urlInput" placeholder="imageUrl" #urlInput>
+    </div>
+    <div class="input-div">
+        <label for="textInput">Write text here: </label>
+        <textarea id="textInput" plaseholder="text content" #textContent></textarea>
+    </div>
+    <button (click)="create(urlInput.value, textContent.value)">Create</button>
+    <button (click)="goBack()">Cancel</button>
+</div>

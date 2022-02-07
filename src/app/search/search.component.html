@@ -1,0 +1,30 @@
+<div>
+    <div class="input-component">
+        <input #searchInput id="searchInput" (input)="search(searchInput!.value)" placeholder="Search">
+    </div>
+    <div class="searchList">
+        <div *ngIf="searchInput.value">
+            <div *ngIf="usersToShow.length!==0">
+                <ul *ngFor="let user of usersToShow[currentPage]">
+                    <li (click)="showSearchResult(user.id)">
+                        <img id="profilePhoto" src={{user.profilePhotoUrl}}>
+                        <label for="profilePhoto">{{user.name}}</label>
+                    </li>
+                </ul>
+                <div>
+                    <button (click)="changePage(-1)">prev</button>
+                    <button (click)="changePage(1)">next</button>
+                </div>
+            </div>
+            <div *ngIf="usersToShow.length===0">
+                <label>Not found</label>
+            </div>
+        </div>
+        <ul *ngIf="!searchInput.value">
+            <li *ngFor="let user of defaultUsers">
+                <img id="profilePhoto" src={{user.profilePhotoUrl}}>
+                <label for="profilePhoto">{{user.name}}</label>
+            </li>
+        </ul>
+    </div>
+</div>

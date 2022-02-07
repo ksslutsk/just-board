@@ -1,0 +1,10 @@
+<div class="logInCard">
+    <p>On this page you can Log in or Register</p>
+    <div class="inputs">
+        <input placeholder="username" #usernameInput>
+        <input type="password" placeholder="password" #passwordInput>
+        <input placeholder="confirm pass" #conPassInput>
+    </div>
+    <input type="checkbox" (change)="checkRegister(registerCheckBox.checked)" #registerCheckBox>Register me
+    <button (click)="login(usernameInput!.value, passwordInput!.value, conPassInput!.value)">Log in</button>
+</div>

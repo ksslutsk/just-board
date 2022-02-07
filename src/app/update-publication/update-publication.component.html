@@ -1,0 +1,13 @@
+<div>
+    <label for="imageUrlInput">Image URL: </label>
+    <input id="imageUrlInput" [(ngModel)]="publication!.imageUrl" #imageUrl>
+</div>
+<div>
+    <label for="textContentInput">Text Content: </label>
+    <textarea id="textContentInput" [(ngModel)]="publication!.textContent" #textContent></textarea>
+</div>
+<div>
+    <button (click)="save(imageUrl.value, textContent.value)">Save</button>
+    <button (click)="cancel()">Cancel</button>
+</div>
+

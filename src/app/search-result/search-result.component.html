@@ -1,0 +1,14 @@
+<div>
+    <ul *ngFor="let publication of publications">
+        <li>
+            <div class="post">
+                <p id="topParagraph">UserId: {{publication.userId}}
+                    <br>PubId: {{publication.id}}
+                </p>
+                <img *ngIf="publication.imageUrl" src={{publication.imageUrl}}>
+                <p *ngIf="publication.textContent">Text content: {{publication.textContent}}</p>
+            </div>
+        </li>
+    </ul>
+
+</div>

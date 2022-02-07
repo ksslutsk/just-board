@@ -1,0 +1,18 @@
+#profilePhoto {
+    height: 2em;
+    width: 2em;
+    border-radius: 1em;
+    border: none;
+}
+#searchInput {
+    width: 100%;
+    height: 2em;
+    border-radius: 0.5em;
+    border: solid 1px gray;
+}
+.searchList {
+    border: 1px solid gray;
+}
+.input-component {
+    margin: 0 0 1em 0;
+}

@@ -1,0 +1,20 @@
+#header{
+    background-color: cadetblue;
+    height: auto;
+    font-size: 150%;
+    font-family: Verdana, Tahoma, sans-serif;
+    margin-bottom: 10px;
+    padding: 0.3em 0.5em 0.3em 0.5em;
+}
+.item { 
+    display: inline-block;
+}
+h2{
+    text-align: left;
+    margin: 0; 
+}
+a {
+    vertical-align: middle;
+    font-size: 22px;
+    float: right;
+}
